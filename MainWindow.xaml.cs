@@ -123,8 +123,18 @@ namespace Baloons
         }
 
         private void PopBalloons(object sender, MouseButtonEventArgs e)
-        { 
-        
+        {
+            if (gameIsActive)
+            {
+                if (e.OriginalSource is Rectangle)
+                {
+                    Rectangle activeRec = (Rectangle)e.OriginalSource;
+                    player.Play();
+
+                    MyCanvas.Children.Remove(activeRec);
+                    score += 1;
+                }
+            }
         }
         private void StartGame()
         {
