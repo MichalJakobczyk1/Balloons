@@ -51,7 +51,47 @@ namespace Baloons
         }
         private void GameEngine(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            ScoreText.Content = "Score: " + score;
+            intervals -= 10;
+
+            if (intervals < 1)
+            {
+                ImageBrush balloonImage = new ImageBrush();
+
+                balloonSkins += 1;
+
+                if (balloonSkins > 5)
+                {
+                    balloonSkins = 1;
+                }
+
+                switch (balloonSkins)
+                {
+                    case 1:
+                        balloonImage.ImageSource = new BitmapImage(new Uri("/image/balloon1.png"));
+                        break;
+                    case 2:
+                        balloonImage.ImageSource = new BitmapImage(new Uri("/image/balloon2.png"));
+                        break;
+                    case 3:
+                        balloonImage.ImageSource = new BitmapImage(new Uri("/image/balloon3.png"));
+                        break;
+                    case 4:
+                        balloonImage.ImageSource = new BitmapImage(new Uri("/image/balloon4.png"));
+                        break;
+                    case 5:
+                        balloonImage.ImageSource = new BitmapImage(new Uri("/image/balloon5.png"));
+                        break;
+                }
+
+                Rectangle newBalloon = new Rectangle
+                {
+                    Tag = "balloon",
+                    Height = 50,
+                    Width = 50,
+                    Fill = balloonImage
+                };
+            }
         }
 
         private void PopBalloons(object sender, MouseButtonEventArgs e)
