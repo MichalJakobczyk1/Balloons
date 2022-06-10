@@ -1,0 +1,5 @@
+C:\Users\Reiwaii\source\repos\Baloons\obj\Debug\net5.0-windows\Baloons.csproj.AssemblyReference.cache
+C:\Users\Reiwaii\source\repos\Baloons\obj\Debug\net5.0-windows\MainWindow.g.cs
+C:\Users\Reiwaii\source\repos\Baloons\obj\Debug\net5.0-windows\App.g.cs
+C:\Users\Reiwaii\source\repos\Baloons\obj\Debug\net5.0-windows\Baloons_MarkupCompile.cache
+C:\Users\Reiwaii\source\repos\Baloons\obj\Debug\net5.0-windows\Baloons_MarkupCompile.lref

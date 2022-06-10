@@ -35,9 +35,22 @@ namespace Baloons
         int missedBalloons;
         bool gameIsActive;
         int score;
+
+        MediaPlayer player = new MediaPlayer();
         public MainWindow()
         {
             InitializeComponent();
+
+            gameTimer.Tick += GameEngine;
+            gameTimer.Interval = TimeSpan.FromMilliseconds(20);
+
+            backgroundImage.ImageSource = new BitmapImage(new Uri("/images/background.png"));
+            MyCanvas.Background = backgroundImage;
+        }
+
+        private void GameEngine(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         private void PopBalloons(object sender, MouseButtonEventArgs e)
