@@ -91,6 +91,23 @@ namespace Baloons
                     Width = 50,
                     Fill = balloonImage
                 };
+
+                Canvas.SetLeft(newBalloon, rand.Next(50, 400));
+                Canvas.SetTop(newBalloon, 600);
+
+                MyCanvas.Children.Add(newBalloon);
+
+                intervals = rand.Next(90, 150);
+            }
+
+            foreach (var x in MyCanvas.Children.OfType<Rectangle>())
+            {
+                if ((string)x.Tag == "balloon")
+                {
+                    i = rand.Next(-5, 5);
+                    Canvas.SetTop(x, Canvas.GetTop(x) - speed);
+                    Canvas.SetLeft(x, Canvas.GetLeft(x) - (i * -1));
+                }
             }
         }
 
