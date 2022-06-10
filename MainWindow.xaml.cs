@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace Baloons
 {
@@ -20,9 +21,32 @@ namespace Baloons
     /// </summary>
     public partial class MainWindow : Window
     {
+        DispatcherTimer gameTimer = new DispatcherTimer();
+
+        int speed = 3;
+        int intervals = 90;
+        Random rand = new Random();
+
+        List<Rectangle> itemRemover = new List<Rectangle>();
+        ImageBrush backgroundImage = new ImageBrush();
+
+        int balloonSkins;
+        int i;
+        int missedBalloons;
+        bool gameIsActive;
+        int score;
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void PopBalloons(object sender, MouseButtonEventArgs e)
+        { 
+        
+        }
+        private void StartGame()
+        { 
+        
         }
     }
 }
