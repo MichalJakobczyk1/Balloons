@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Baloons
+namespace WPF_Balloon_Popping_Game_Moo_ICT
 {
     /// <summary>
     /// Interaction logic for App.xaml
