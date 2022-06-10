@@ -46,8 +46,9 @@ namespace Baloons
 
             backgroundImage.ImageSource = new BitmapImage(new Uri("/images/background.png"));
             MyCanvas.Background = backgroundImage;
-        }
 
+            RestartGame();
+        }
         private void GameEngine(object sender, EventArgs e)
         {
             throw new NotImplementedException();
@@ -58,8 +59,28 @@ namespace Baloons
         
         }
         private void StartGame()
-        { 
-        
+        {
+            gameTimer.Start();
+
+            missedBalloons = 0;
+            score = 0;
+            intervals = 90;
+            gameIsActive = true;
+            speed = 3;
+        }
+        private void RestartGame()
+        {
+            foreach (var x in MyCanvas.Children.OfType<Rectangle>())
+            {
+                itemRemover.Add(x);
+            }
+
+            foreach (Rectangle y in itemRemover)
+            {
+                MyCanvas.Children.Remove(y);
+            }
+
+            itemRemover.Clear();
         }
     }
 }
