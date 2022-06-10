@@ -108,6 +108,17 @@ namespace Baloons
                     Canvas.SetTop(x, Canvas.GetTop(x) - speed);
                     Canvas.SetLeft(x, Canvas.GetLeft(x) - (i * -1));
                 }
+
+                if (Canvas.GetTop(x) < 20)
+                {
+                    itemRemover.Add(x);
+                    missedBalloons += 1;
+                }
+            }
+
+            foreach (Rectangle y in itemRemover)
+            {
+                MyCanvas.Children.Remove(y);
             }
         }
 
