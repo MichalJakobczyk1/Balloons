@@ -9,7 +9,5 @@
     <Canvas Name="MyCanvas" Focusable="True" MouseLeftButtonDown="PopBalloons" Background="White">
 
         <Label FontSize="24" Name="scoreText" Content="Score: 0" FontWeight="ExtraBold" Canvas.Top="529" />
-
-
-    </Canvas>
+		<Label FontSize="24" Name="bestScore" Content="Best Score: 0" FontWeight="ExtraBold" Canvas.Top="529" Canvas.Right="0"/></Canvas>
 </Window>

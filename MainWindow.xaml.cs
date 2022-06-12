@@ -105,7 +105,6 @@ namespace WPF_Balloon_Popping_Game_Moo_ICT
                 Canvas.SetTop(newBalloon, 600);
 
                 MyCanvas.Children.Add(newBalloon);
-
                 intervals = rand.Next(90, 150);
             }
 
@@ -128,33 +127,39 @@ namespace WPF_Balloon_Popping_Game_Moo_ICT
 
                     missedBalloons += 1;
                 }
-
-
             }
-
 
             foreach (Rectangle y in itemRemover)
             {
                 MyCanvas.Children.Remove(y);
             }
 
-
-
             if (missedBalloons > 10)
             {
                 gameIsActive = false;
                 gameTimer.Stop();
                 MessageBox.Show("Game over!! You missed 10 Balloons" + Environment.NewLine + "Click ok to play again");
-
                 RestartGame();
             }
 
-            if (score > 3)
+            switch (score,speed)
             {
-                speed = 7;
+                case 10: 
+                    speed = 5;
+                    break;
+                case 25:
+                    speed = 7;
+                    break;
+                case 50:
+                    speed = 9;
+                    break;
+                case 100:
+                    speed = 12;
+                    break;
+                case 150:
+                    speed = 15;
+                    break;
             }
-
-
 
         }
 
@@ -162,7 +167,6 @@ namespace WPF_Balloon_Popping_Game_Moo_ICT
         {
             if (gameIsActive)
             {
-
                 if (e.OriginalSource is Rectangle)
                 {
 
@@ -175,13 +179,25 @@ namespace WPF_Balloon_Popping_Game_Moo_ICT
 
                     score += 1;
                 }
+
+                else
+	            {
+                    if (score == 0)
+	                {
+                        score -= 0;
+	                }
+                    else
+	                {
+                        score -= 1;
+	                }
+ 
+	            }
             }
         }
 
         private void StartGame()
         {
             gameTimer.Start();
-
             missedBalloons = 0;
             score = 0;
             intervals = 90;
@@ -202,12 +218,7 @@ namespace WPF_Balloon_Popping_Game_Moo_ICT
             }
 
             itemRemover.Clear();
-
             StartGame();
-
-
-
         }
-
     }
 }
