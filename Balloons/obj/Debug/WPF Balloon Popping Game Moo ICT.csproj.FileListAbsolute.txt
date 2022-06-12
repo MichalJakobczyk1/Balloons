@@ -30,19 +30,3 @@ C:\Users\Reiwaii\source\repos\WPF-Balloon-popping-game\WPF Balloon Popping Game 
 C:\Users\Reiwaii\source\repos\WPF-Balloon-popping-game\WPF Balloon Popping Game Moo ICT\obj\Debug\WPF Balloon Popping Game Moo ICT.csproj.CoreCompileInputs.cache
 C:\Users\Reiwaii\source\repos\WPF-Balloon-popping-game\WPF Balloon Popping Game Moo ICT\obj\Debug\WPF Balloon Popping Game Moo ICT.exe
 C:\Users\Reiwaii\source\repos\WPF-Balloon-popping-game\WPF Balloon Popping Game Moo ICT\obj\Debug\WPF Balloon Popping Game Moo ICT.pdb
-C:\Users\Reiwaii\source\repos\Baloons\bin\Debug\WPF Balloon Popping Game Moo ICT.exe.config
-C:\Users\Reiwaii\source\repos\Baloons\bin\Debug\WPF Balloon Popping Game Moo ICT.exe
-C:\Users\Reiwaii\source\repos\Baloons\bin\Debug\WPF Balloon Popping Game Moo ICT.pdb
-C:\Users\Reiwaii\source\repos\Baloons\obj\Debug\WPF Balloon Popping Game Moo ICT.csproj.AssemblyReference.cache
-C:\Users\Reiwaii\source\repos\Baloons\obj\Debug\MainWindow.g.cs
-C:\Users\Reiwaii\source\repos\Baloons\obj\Debug\App.g.cs
-C:\Users\Reiwaii\source\repos\Baloons\obj\Debug\WPF Balloon Popping Game Moo ICT_Content.g.cs
-C:\Users\Reiwaii\source\repos\Baloons\obj\Debug\WPF Balloon Popping Game Moo ICT_MarkupCompile.cache
-C:\Users\Reiwaii\source\repos\Baloons\obj\Debug\WPF Balloon Popping Game Moo ICT_MarkupCompile.lref
-C:\Users\Reiwaii\source\repos\Baloons\obj\Debug\MainWindow.baml
-C:\Users\Reiwaii\source\repos\Baloons\obj\Debug\WPF Balloon Popping Game Moo ICT.g.resources
-C:\Users\Reiwaii\source\repos\Baloons\obj\Debug\WPF_Balloon_Popping_Game_Moo_ICT.Properties.Resources.resources
-C:\Users\Reiwaii\source\repos\Baloons\obj\Debug\WPF Balloon Popping Game Moo ICT.csproj.GenerateResource.cache
-C:\Users\Reiwaii\source\repos\Baloons\obj\Debug\WPF Balloon Popping Game Moo ICT.csproj.CoreCompileInputs.cache
-C:\Users\Reiwaii\source\repos\Baloons\obj\Debug\WPF Balloon Popping Game Moo ICT.exe
-C:\Users\Reiwaii\source\repos\Baloons\obj\Debug\WPF Balloon Popping Game Moo ICT.pdb
