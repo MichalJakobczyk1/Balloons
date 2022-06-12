@@ -105,7 +105,6 @@ namespace WPF_Balloon_Popping_Game_Moo_ICT
                 Canvas.SetTop(newBalloon, 600);
 
                 MyCanvas.Children.Add(newBalloon);
-
                 intervals = rand.Next(90, 150);
             }
 
@@ -114,12 +113,10 @@ namespace WPF_Balloon_Popping_Game_Moo_ICT
 
                 if ((string)x.Tag == "balloon")
                 {
-
                     i = rand.Next(-5, 5);
 
                     Canvas.SetTop(x, Canvas.GetTop(x) - speed);
                     Canvas.SetLeft(x, Canvas.GetLeft(x) - (i * -1));
-
                 }
 
                 if (Canvas.GetTop(x) < 20)
@@ -128,34 +125,21 @@ namespace WPF_Balloon_Popping_Game_Moo_ICT
 
                     missedBalloons += 1;
                 }
-
-
             }
-
 
             foreach (Rectangle y in itemRemover)
             {
                 MyCanvas.Children.Remove(y);
             }
 
-
-
             if (missedBalloons > 10)
             {
                 gameIsActive = false;
                 gameTimer.Stop();
-                MessageBox.Show("Game over!! You missed 10 Balloons" + Environment.NewLine + "Click ok to play again");
+                MessageBox.Show($"Game over, you scored: {score} points" + Environment.NewLine + "Click ok to play again");
 
                 RestartGame();
             }
-
-            if (score > 3)
-            {
-                speed = 7;
-            }
-
-
-
         }
 
         private void PopBalloons(object sender, MouseButtonEventArgs e)
@@ -175,6 +159,36 @@ namespace WPF_Balloon_Popping_Game_Moo_ICT
 
                     score += 1;
                 }
+                else
+	            {
+                    if (score == 0)
+	                {
+                        score += 0;
+	                }
+                    else
+	                {
+                        score -= 1;
+	                }
+	            }
+
+                switch (score)
+	            {
+		            case 10:
+                        speed = 5;
+                        break;
+                    case 25:
+                        speed = 7;
+                        break;
+                    case 50:
+                        speed = 9;
+                        break;
+                    case 100:
+                        speed = 12;
+                        break;
+                    case 150:
+                        speed = 15;
+                        break;
+	            }
             }
         }
 
@@ -202,12 +216,7 @@ namespace WPF_Balloon_Popping_Game_Moo_ICT
             }
 
             itemRemover.Clear();
-
             StartGame();
-
-
-
         }
-
     }
 }
