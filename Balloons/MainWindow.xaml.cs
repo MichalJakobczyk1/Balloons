@@ -40,6 +40,8 @@ namespace WPF_Balloon_Popping_Game_Moo_ICT
         bool gameIsActive;
 
         int score;
+        int lastScore = 0;
+        int bestScore;
 
         MediaPlayer player = new MediaPlayer();
 
@@ -132,11 +134,13 @@ namespace WPF_Balloon_Popping_Game_Moo_ICT
                 MyCanvas.Children.Remove(y);
             }
 
-            if (missedBalloons > 10)
+            if (missedBalloons > 2)
             {
                 gameIsActive = false;
                 gameTimer.Stop();
-                MessageBox.Show($"Game over, you scored: {score} points" + Environment.NewLine + "Click ok to play again");
+                MessageBox.Show($"Game over, you scored: {score} points" + Environment.NewLine + $"Your last score was: {lastScore} points" + Environment.NewLine + "Click ok to play again");
+                
+                lastScore = score;
 
                 RestartGame();
             }
