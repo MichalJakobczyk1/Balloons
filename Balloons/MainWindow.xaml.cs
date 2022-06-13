@@ -126,6 +126,7 @@ namespace WPF_Balloon_Popping_Game_Moo_ICT
                     itemRemover.Add(x);
 
                     missedBalloons += 1;
+                    score -= 1;
                 }
             }
 
@@ -134,7 +135,7 @@ namespace WPF_Balloon_Popping_Game_Moo_ICT
                 MyCanvas.Children.Remove(y);
             }
 
-            if (missedBalloons > 2)
+            if (missedBalloons > 10)
             {
                 gameIsActive = false;
                 gameTimer.Stop();
